@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+<div class="wrapper">
+  <div class="uppertext">
+    <h5 class="right-side">calc</h5>
+    <div class="left-side">
+      <p class="themetext">THEME</p>
+      <div class="toggle-container">
+        <div class="toggle">
+          <p id="one">1</p>
+          <p id="two">2</p>
+          <p id="three">3</p>
+        </div>
+        <div class="tri-state-toggle">
+          <input type="text" class="button" name="toggle" id="one">
+          <input type="text" class="button" name="toggle" id="two">
+          <input type="text" class="button" name="toggle" id="three">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="cal-screen">
+    <form name="calc">
+      <input type="text" name="text" readonly id="screen">
+    </form>
+  </div>
+  <div class="cal-body">
+    <div class="numbers">
+      <button onclick="document.calc.text.value+='7'">7</button>
+      <button onclick="document.calc.text.value+='8'">8</button>
+      <button onclick="document.calc.text.value+='9'">9</button>
+      <button class="delete-bt" onclick="deleteoption()">DEL</button>
+      <button onclick="document.calc.text.value+='4'">4</button>
+      <button onclick="document.calc.text.value+='5'">5</button>
+      <button onclick="document.calc.text.value+='6'">6</button>
+      <button onclick="document.calc.text.value+='+'">+</button>
+      <button onclick="document.calc.text.value+='1'">1</button>
+      <button onclick="document.calc.text.value+='2'">2</button>
+      <button onclick="document.calc.text.value+='3'">3</button>
+      <button onclick="document.calc.text.value+='-'">-</button>
+      <button onclick="document.calc.text.value+='.'">.</button>
+      <button onclick="document.calc.text.value+='0'">0</button>
+      <button onclick="document.calc.text.value+='/'">/</button>
+      <button onclick="document.calc.text.value+='*'">x</button>
+    </div>
+    <div class="otherbuttons">
+        <button class="reset-bt" onclick="document.calc.text.value=''">RESET</button>
+        <button class="equal-bt" onclick="document.calc.text.value=eval(calc.text.value)">=</button>
+    </div>
+  </div>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="#">John Edgi Tan</a>.
+</div>
+</div>
+
+  
+  <script src="script.js">
+    
+  </script>
+</body>
+</html>
